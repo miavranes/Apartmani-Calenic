@@ -1,0 +1,14 @@
+{
+  "name": "Apartmani Čalenić",
+  "short_name": "Čalenić",
+  "description": "Vodič za goste apartmana Čalenić — Petrovac na Moru, Montenegro.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4efe5",
+  "theme_color": "#f4efe5",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}
