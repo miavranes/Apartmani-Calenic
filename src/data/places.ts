@@ -43,7 +43,7 @@ export const beaches: Place[] = [
       ru: "Кристально чистая вода и спокойная атмосфера.",
       fr: "Eau cristalline et atmosphère paisible.",
     },
-    distance: { sr: "2 min vožnje", en: "2 min drive", de: "2 Min mit dem Auto", ru: "2 мин на машине", fr: "2 min en voiture" },
+    distance: { sr: "10 min hoda", en: "10 min walk", de: "10 Min Fußweg", ru: "10 мин пешком", fr: "10 min à pied" },
     mapsQuery: "Lučice Beach, Petrovac",
   },
   {
@@ -56,6 +56,7 @@ export const beaches: Place[] = [
       ru: "Длинный природный пляж, менее людный, есть парковка.",
       fr: "Longue plage naturelle, moins fréquentée, parking disponible.",
     },
+    distance: { sr: "5 min vožnje", en: "5 min drive", de: "5 Min mit dem Auto", ru: "5 мин на машине", fr: "5 min en voiture" },
     mapsQuery: "Buljarica Beach, Montenegro",
   },
   {
@@ -81,6 +82,7 @@ export const beaches: Place[] = [
       ru: "Популярный пляж у Будвы, идеален для купания и закатов.",
       fr: "Plage populaire près de Budva, idéale pour la baignade et les couchers de soleil.",
     },
+    distance: { sr: "25 min vožnje", en: "25 min drive", de: "25 Min mit dem Auto", ru: "25 мин на машине", fr: "25 min en voiture" },
     mapsQuery: "Jaz Beach, Budva",
   },
 ];
