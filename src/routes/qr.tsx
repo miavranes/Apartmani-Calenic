@@ -16,21 +16,20 @@ export const Route = createFileRoute("/qr")({
   component: QrPage,
 });
 
-type Mode = "site" | "wifi" | "custom";
+type Mode = "site" | "wifi";
 
 function QrPage() {
   const t = useT();
   const [mode, setMode] = useState<Mode>("site");
-  const [custom, setCustom] = useState("");
-  const [siteUrl, setSiteUrl] = useState("");
+  const [siteUrl, setSiteUrl] = useState("https://apartmani-calenic.me");
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setSiteUrl(window.location.origin);
+    setSiteUrl(window.location.origin || "https://apartmani-calenic.me");
   }, []);
 
   const wifiPayload = `WIFI:T:WPA;S:${WIFI.floor3.network};P:${WIFI.floor3.password};;`;
-  const value = mode === "site" ? siteUrl || "https://" : mode === "wifi" ? wifiPayload : custom || " ";
+  const value = mode === "site" ? siteUrl || "https://" : wifiPayload;
 
   const download = () => {
     const canvas = containerRef.current?.querySelector("canvas");
@@ -45,7 +44,6 @@ function QrPage() {
   const tabs: { key: Mode; label: string; icon: React.ReactNode }[] = [
     { key: "site", label: t.qr.siteUrl, icon: <LinkIcon className="h-4 w-4" /> },
     { key: "wifi", label: t.qr.wifiCode, icon: <Wifi className="h-4 w-4" /> },
-    { key: "custom", label: t.qr.custom, icon: <Pencil className="h-4 w-4" /> },
   ];
 
   return (
@@ -69,19 +67,6 @@ function QrPage() {
             </button>
           ))}
         </div>
-
-        {mode === "custom" && (
-          <div className="mt-5">
-            <label className="text-xs uppercase tracking-wide text-muted-foreground">{t.qr.customLabel}</label>
-            <input
-              value={custom}
-              onChange={(e) => setCustom(e.target.value)}
-              maxLength={500}
-              placeholder="https://…"
-              className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-2.5 outline-none transition focus:border-primary"
-            />
-          </div>
-        )}
 
         <div className="mt-8 flex flex-col items-center gap-6">
           <div ref={containerRef} className="rounded-2xl bg-white p-5 shadow-soft">
