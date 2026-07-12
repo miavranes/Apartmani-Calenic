@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink, MapPin, Compass } from "lucide-react";
 import { PageHeader, PageShell } from "@/components/PageShell";
 import { useI18n, useT } from "@/i18n";
-import { excursions } from "@/data/places";
+import { excursions, getLocalizedValue } from "@/data/places";
 
 export const Route = createFileRoute("/excursions")({
   head: () => ({
@@ -24,7 +24,7 @@ function ExcursionsPage() {
         {excursions.map((e) => (
           <article key={e.id} className="group flex flex-col rounded-3xl border border-border bg-card/80 p-6 shadow-soft transition hover:-translate-y-0.5 animate-fade-in">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary"><Compass className="h-5 w-5" /></span>
-            <h2 className="mt-4 font-serif text-xl">{e.name}</h2>
+            <h2 className="mt-4 font-serif text-xl">{getLocalizedValue(e.name, locale)}</h2>
             <p className="mt-2 flex-1 text-sm text-muted-foreground">{e.desc[locale]}</p>
             {e.mapsQuery && (
               <a

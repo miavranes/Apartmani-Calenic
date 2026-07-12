@@ -1,8 +1,26 @@
+import type { Locale } from "@/i18n/types";
+
+export type LocalizedText = {
+  sr: string;
+  en: string;
+  de: string;
+  ru: string;
+  fr: string;
+};
+
+export type LocalizedValue = string | LocalizedText;
+
+export function getLocalizedValue(value: LocalizedValue | undefined, locale: Locale) {
+  if (!value) return "";
+  if (typeof value === "string") return value;
+  return value[locale] ?? value.sr;
+}
+
 export type Place = {
   id: string;
-  name: string;
-  desc: { sr: string; en: string; de: string; ru: string; fr: string };
-  distance?: { sr: string; en: string; de: string; ru: string; fr: string };
+  name: LocalizedValue;
+  desc: LocalizedText;
+  distance?: LocalizedText;
   mapsQuery?: string;
 };
 
@@ -69,7 +87,7 @@ export const beaches: Place[] = [
       ru: "Один из самых красивых пляжей Черногории.",
       fr: "L'une des plus belles plages du Monténégro.",
     },
-    distance: { sr: "20 min vožnje", en: "20 min drive", de: "20 Min mit dem Auto", ru: "20 мин на машине", fr: "20 min en voiture" },
+    distance: { sr: "15 min vožnje", en: "15 min drive", de: "15 Min mit dem Auto", ru: "15 мин на машине", fr: "15 min en voiture" },
     mapsQuery: "Sveti Stefan Beach, Montenegro",
   },
   {
@@ -82,7 +100,7 @@ export const beaches: Place[] = [
       ru: "Популярный пляж у Будвы, идеален для купания и закатов.",
       fr: "Plage populaire près de Budva, idéale pour la baignade et les couchers de soleil.",
     },
-    distance: { sr: "25 min vožnje", en: "25 min drive", de: "25 Min mit dem Auto", ru: "25 мин на машине", fr: "25 min en voiture" },
+    distance: { sr: "30 min vožnje", en: "30 min drive", de: "30 Min mit dem Auto", ru: "30 мин на машине", fr: "30 min en voiture" },
     mapsQuery: "Jaz Beach, Budva",
   },
 ];
@@ -129,7 +147,7 @@ export const restaurants: Place[] = [
 export const excursions: Place[] = [
   {
     id: "old-bar",
-    name: "Old Bar Fortress",
+    name: { sr: "Stari Bar", en: "Old Bar Fortress", de: "Old Bar Fortress", ru: "Старый Бар", fr: "Forteresse d'Old Bar" },
     desc: {
       sr: "Drevne ruševine i panoramski pogled na primorje.",
       en: "Ancient ruins and panoramic coastal views.",
@@ -141,7 +159,7 @@ export const excursions: Place[] = [
   },
   {
     id: "skadar",
-    name: "Skadar Lake — Virpazar",
+    name: { sr: "Skadarsko jezero", en: "Skadar Lake — Virpazar", de: "Skadar-See — Virpazar", ru: "Скадарское озеро", fr: "Lac de Skadar — Virpazar" },
     desc: {
       sr: "Najveće jezero na Balkanu, krstarenje i nacionalni park.",
       en: "Largest lake in the Balkans, boat tours and national park.",
@@ -189,7 +207,7 @@ export const excursions: Place[] = [
   },
   {
     id: "budva",
-    name: "Budva Old Town",
+    name: { sr: "Stari grad Budva", en: "Budva Old Town", de: "Altstadt Budva", ru: "Старый город Будвы", fr: "Vieille ville de Budva" },
     desc: {
       sr: "Srednjovjekovne uličice, citadela i živa šetnja uz more.",
       en: "Medieval lanes, citadel and a lively seaside promenade.",
@@ -201,7 +219,7 @@ export const excursions: Place[] = [
   },
   {
     id: "lovcen",
-    name: "Lovćen National Park",
+    name: { sr: "Lovćen nacionalni park", en: "Lovćen National Park", de: "Nationalpark Lovćen", ru: "Национальный парк Ловчен", fr: "Parc national du Lovćen" },
     desc: {
       sr: "Planinski nacionalni park i Njegošev mauzolej.",
       en: "Mountain national park and Njegoš mausoleum.",
@@ -213,7 +231,7 @@ export const excursions: Place[] = [
   },
   {
     id: "ostrog",
-    name: "Ostrog Monastery",
+    name: { sr: "Manastir Ostrog", en: "Ostrog Monastery", de: "Kloster Ostrog", ru: "Монастырь Острог", fr: "Monastère d'Ostrog" },
     desc: {
       sr: "Manastir uklesan u stijenu — duhovni dragulj Crne Gore.",
       en: "Monastery carved into a cliff — Montenegro's spiritual gem.",
@@ -228,18 +246,18 @@ export const excursions: Place[] = [
 export const shopping = {
   supermarkets: [
     {
-      sr: "VOLI Supermarket — najveći supermarket u Petrovcu.",
-      en: "VOLI Supermarket — largest supermarket in Petrovac.",
-      de: "VOLI Supermarkt — größter Supermarkt in Petrovac.",
-      ru: "VOLI — крупнейший супермаркет в Петроваце.",
-      fr: "VOLI — le plus grand supermarché de Petrovac.",
+      sr: "VOLI Supermarket — najveći supermarket u Petrovcu. 50 metara.",
+      en: "VOLI Supermarket — largest supermarket in Petrovac. 50 meters.",
+      de: "VOLI Supermarkt — größter Supermarkt in Petrovac. 50 Meter.",
+      ru: "VOLI — крупнейший супермаркет в Петроваце. 50 метров.",
+      fr: "VOLI — le plus grand supermarché de Petrovac. 50 mètres.",
     },
     {
-      sr: "Aroma Market — odlična delikatesna sekcija.",
-      en: "Aroma Market — excellent deli section.",
-      de: "Aroma Market — exzellente Feinkostabteilung.",
-      ru: "Aroma Market — отличный гастрономический отдел.",
-      fr: "Aroma Market — excellent rayon traiteur.",
+      sr: "Aroma Market — odlična delikatesna sekcija. 400 m.",
+      en: "Aroma Market — excellent deli section. 400 m.",
+      de: "Aroma Market — exzellente Feinkostabteilung. 400 m.",
+      ru: "Aroma Market — отличный гастрономический отдел. 400 м.",
+      fr: "Aroma Market — excellent rayon traiteur. 400 m.",
     },
   ],
   market: {
