@@ -45,13 +45,7 @@ function ContactPage() {
             <div className="text-lg font-medium">@{CONTACT.instagram}</div>
           </div>
         </a>
-        <a href={CONTACT.airbnb} target="_blank" rel="noreferrer" className="group flex items-center gap-4 rounded-2xl border border-border bg-card/80 p-5 shadow-soft transition hover:-translate-y-0.5 hover:bg-accent">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><ExternalLink className="h-5 w-5" /></span>
-          <div>
-            <div className="text-xs uppercase tracking-wide text-muted-foreground">{t.contact.airbnb}</div>
-            <div className="text-lg font-medium">airbnb.rs/rooms/42249739</div>
-          </div>
-        </a>
+        
       </div>
 
       <div id="map" className="mt-10 scroll-mt-24">

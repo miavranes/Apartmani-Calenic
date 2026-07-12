@@ -15,13 +15,13 @@ export function LanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger
         aria-label="Select language"
-        className="inline-flex h-9 items-center gap-2 rounded-full border border-border bg-card/60 px-3 text-sm backdrop-blur transition hover:bg-accent"
+        className="lang-trigger inline-flex h-10 items-center gap-2 rounded-full border border-border px-3 text-sm shadow-sm transition hover:bg-accent"
       >
         <Globe className="h-4 w-4" />
         <span className="hidden sm:inline">{current?.code.toUpperCase()}</span>
         <span className="sm:hidden">{current?.flag}</span>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-[160px]">
+      <DropdownMenuContent align="end" sideOffset={8} className="lang-menu min-w-[180px] rounded-2xl border border-border p-1 text-foreground shadow-xl">
         {LOCALES.map((l) => (
           <DropdownMenuItem
             key={l.code}

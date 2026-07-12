@@ -21,15 +21,15 @@ export function Header() {
   ] as const;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md font-sans">
-      <div className="flex h-16 items-center justify-between px-0">
-        <div className="pl-4 sm:pl-6">
-          <Link to="/" className="flex items-center gap-2 font-serif text-xl tracking-tight">
+    <header className="site-header sticky top-0 z-50 w-full border-b border-border/60 font-sans">
+      <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+        <div className="min-w-0">
+          <Link to="/" className="flex items-center gap-2 font-serif text-lg tracking-tight sm:text-xl">
             <span>Apartmani Čalenić</span>
           </Link>
         </div>
 
-        <div className="pr-4 sm:pr-6 flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3">
           <nav className="hidden items-center gap-1 lg:flex">
             {links.map((l) => (
               <Link
@@ -50,7 +50,7 @@ export function Header() {
             <button
               onClick={() => setOpen((o) => !o)}
               aria-label="Menu"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card/60 backdrop-blur lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background shadow-sm lg:hidden"
             >
               {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
@@ -59,8 +59,8 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background/95 backdrop-blur lg:hidden">
-          <nav className="mx-auto grid max-w-7xl grid-cols-2 gap-1 px-4 py-3 sm:px-6">
+        <div className="site-header w-full border-t border-border/60 lg:hidden">
+          <nav className="grid w-full grid-cols-1 gap-1 px-4 py-3 sm:grid-cols-2 sm:px-6 lg:px-8">
             {links.map((l) => (
               <Link
                 key={l.to}

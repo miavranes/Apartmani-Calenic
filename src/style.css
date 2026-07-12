@@ -170,4 +170,22 @@
   .animate-fade-in-left {
     animation: fade-in-left 0.8s cubic-bezier(.22,1,.36,1) both;
   }
+
+  .site-header {
+    background-color: var(--background) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .lang-trigger {
+    background-color: var(--background) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .lang-menu {
+    background-color: var(--background) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
 }
