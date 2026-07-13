@@ -190,4 +190,14 @@
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
+
+  .hero-image {
+    object-position: 50% 65%;
+  }
+
+  @media (min-width: 640px) {
+    .hero-image {
+      object-position: 10% 50%;
+    }
+  }
 }

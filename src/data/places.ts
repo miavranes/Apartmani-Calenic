@@ -131,6 +131,18 @@ export const restaurants: Place[] = [
     mapsQuery: "Restaurant Fortuna Petrovac",
   },
   {
+    id: "pasterija-pellegrino",
+    name: "Pasterija Pellegrino",
+    desc: {
+      sr: "Odlična pasta, razne vrste i pogled na more. Idealno za lagani ručak uz zvuk talasa.",
+      en: "Excellent pasta, many varieties and a seaside view. Perfect for a light lunch with the sound of the waves.",
+      de: "Ausgezeichnete Pasta, viele Sorten und Meerblick. Ideal für ein leichtes Mittagessen mit Meeresrauschen.",
+      ru: "Отличная паста, много видов и вид на море. Идеально для легкого обеда под шум волн.",
+      fr: "Excellente pasta, diverses variétés et vue sur la mer. Parfait pour un déjeuner léger au son des vagues.",
+    },
+    mapsQuery: "Pasterija Pellegrino Petrovac",
+  },
+  {
     id: "pod-lozom",
     name: "Pod Lozom",
     desc: {

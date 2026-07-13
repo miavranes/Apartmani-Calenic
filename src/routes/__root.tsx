@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#f4efe5" },
-      { title: "Apartmani Čalenić — Petrovac na Moru" },
+      { title: "Apartmani Čalenić" },
       {
         name: "description",
         content:
           "Vodič za goste apartmana Čalenić u Petrovcu na Moru — Wi-Fi, plaže, restorani, izleti, hitni kontakti i živo vrijeme.",
       },
-      { property: "og:title", content: "Apartmani Čalenić — Petrovac na Moru" },
+      { property: "og:title", content: "Apartmani Čalenić" },
       { property: "og:description", content: "Vaš dom u srcu Petrovca." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

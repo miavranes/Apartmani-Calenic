@@ -14,7 +14,7 @@ export function Hero() {
           <img
             src={houseImg}
             alt="Apartmani Čalenić"
-            className="h-screen w-screen object-cover object-[10%_50%] opacity-100"
+            className="h-screen w-screen object-cover hero-image opacity-100"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/25" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/50 to-transparent" />
