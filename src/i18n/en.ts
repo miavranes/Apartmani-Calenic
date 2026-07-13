@@ -88,6 +88,7 @@ export const en: Dict = {
       "Please avoid wearing swimwear in shared or indoor areas of the property.",
       "Do not bring sand into the property on shoes, clothing, or towels.",
       "Removing equipment from the unit, including furniture, appliances, towels, or blankets, is not allowed.",
+      "When leaving the apartment, please turn off the air conditioning, lower the awnings, and switch off the electricity.",
       "When leaving for an extended period, close windows, secure shutters, and lock both the room and property doors.",
       "Do not leave valuables, jewelry, or cash in the room.",
       "Visitors are not allowed to enter the property without prior consent from the host.",
@@ -113,6 +114,10 @@ export const en: Dict = {
     pharmacies: "Pharmacies",
     atms: "ATMs",
     market: "Farmers market",
+    supermarketsNoteTitle: "Sunday & holiday opening",
+    supermarketsNote: "Most supermarkets are closed on Sundays.\nExceptions are Tabako shop by Hotel Palas and two shops on the promenade.\nOn Montenegro state holidays they are also closed.",
+    holidayDatesLabel: "State holidays",
+    holidayDates: "1.1, 7.1, 1.5, 9.5, 21.5, 13.7, 19.12.",
   },
   excursions: {
     title: "Excursions",

@@ -88,6 +88,7 @@ export const de: Dict = {
       "Bitte vermeiden Sie es, sich in Badebekleidung in Gemeinschaftsbereichen oder Innenräumen aufzuhalten.",
       "Bringen Sie keinen Sand mit in die Unterkunft auf Schuhen, Kleidung oder Handtüchern.",
       "Das Herausnehmen von Ausstattung aus der Einheit, einschließlich Möbeln, Geräten, Handtüchern oder Decken, ist nicht gestattet.",
+      "Beim Verlassen der Unterkunft schalten Sie bitte die Klimaanlage aus, fahren Sie die Markisen ein und schalten Sie den Strom ab.",
       "Bei längerer Abwesenheit schließen Sie Fenster und Rollläden und verriegeln Sie sowohl die Zimmertür als auch die Tür der Unterkunft.",
       "Wertsachen, Schmuck und Bargeld dürfen nicht im Zimmer zurückgelassen werden.",
       "Besuchern ist der Zutritt zur Unterkunft ohne vorherige Zustimmung des Gastgebers nicht gestattet.",
@@ -113,6 +114,10 @@ export const de: Dict = {
     pharmacies: "Apotheken",
     atms: "Geldautomaten",
     market: "Bauernmarkt",
+    supermarketsNoteTitle: "Sonntag & Feiertage",
+    supermarketsNote: "Die meisten Supermärkte sind sonntags geschlossen.\nAusnahmen sind der Tabako-Shop beim Hotel Palas und zwei Läden an der Promenade.\nAn staatlichen Feiertagen in Montenegro sind sie ebenfalls geschlossen.",
+    holidayDatesLabel: "Staatliche Feiertage",
+    holidayDates: "1.1, 7.1, 1.5, 9.5, 21.5, 13.7, 19.12.",
   },
   excursions: {
     title: "Ausflüge",

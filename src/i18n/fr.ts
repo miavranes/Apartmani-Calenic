@@ -88,6 +88,7 @@ export const fr: Dict = {
       "Il est déconseillé de se déplacer en maillot de bain dans les espaces communs ou intérieurs de la propriété.",
       "Ne faites pas entrer de sable dans la propriété sur vos chaussures, vêtements ou serviettes.",
       "Il n'est pas autorisé de retirer du matériel de l'unité, y compris les meubles, l'équipement, les serviettes ou les couvertures.",
+      "En quittant l'appartement, veuillez éteindre la climatisation, baisser les stores et couper l'électricité.",
       "En cas d'absence prolongée, fermez les fenêtres, les volets et verrouillez la porte de la chambre ainsi que la porte de la propriété.",
       "Ne laissez pas de objets de valeur, bijoux ou argent dans la chambre.",
       "Les visiteurs ne sont pas autorisés à entrer dans la propriété sans le consentement préalable de l'hôte.",
@@ -113,6 +114,10 @@ export const fr: Dict = {
     pharmacies: "Pharmacies",
     atms: "Distributeurs",
     market: "Marché",
+    supermarketsNoteTitle: "Dimanche et jours fériés",
+    supermarketsNote: "La plupart des supermarchés sont fermés le dimanche.\nExceptions : Tabako shop près de l'hôtel Palas et deux commerces sur la promenade.\nLes jours fériés d'État au Monténégro, ils sont également fermés.",
+    holidayDatesLabel: "Jours fériés d'État",
+    holidayDates: "1.1, 7.1, 1.5, 9.5, 21.5, 13.7, 19.12.",
   },
   excursions: {
     title: "Excursions",

@@ -22,6 +22,17 @@ function ShoppingPage() {
     <PageShell>
       <PageHeader eyebrow={t.nav.shopping} title={t.shopping.title} subtitle={t.shopping.subtitle} />
 
+      <div className="rounded-3xl border border-red-200 bg-red-50/80 p-6 shadow-soft animate-fade-in sm:p-8 mb-8">
+        <div className="mb-4 flex items-center gap-3">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-900">!</span>
+          <h2 className="font-serif text-2xl">{t.shopping.supermarketsNoteTitle}</h2>
+        </div>
+        <p className="text-[15px] text-red-900 whitespace-pre-line leading-6">{t.shopping.supermarketsNote}</p>
+        <p className="mt-3 text-sm font-medium text-red-900">
+          {t.shopping.holidayDatesLabel}: {t.shopping.holidayDates}
+        </p>
+      </div>
+
       <div className="grid gap-6 md:grid-cols-2">
         <Card icon={<ShoppingCart className="h-5 w-5" />} title={t.shopping.supermarkets}>
           <ul className="space-y-2 text-[15px] text-muted-foreground">

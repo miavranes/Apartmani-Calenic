@@ -100,6 +100,10 @@ export type Dict = {
     pharmacies: string;
     atms: string;
     market: string;
+    supermarketsNoteTitle: string;
+    supermarketsNote: string;
+    holidayDatesLabel: string;
+    holidayDates: string;
   };
   excursions: { title: string; subtitle: string };
   qr: {

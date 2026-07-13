@@ -14,10 +14,10 @@ export function Hero() {
           <img
             src={houseImg}
             alt="Apartmani Čalenić"
-            className="h-screen w-screen object-cover opacity-90"
+            className="h-screen w-screen object-cover object-[10%_50%] opacity-100"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-black/15 to-black/45" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/70 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/25" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/50 to-transparent" />
         </div>
 
         {/* Overlay content positioned left */}
@@ -39,12 +39,7 @@ export function Hero() {
               >
                 {t.nav.info}
               </Link>
-              <a
-                href="#weather"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:opacity-90"
-              >
-                {t.weather.title}
-              </a>
+              
             </div>
           </div>
         </div>
