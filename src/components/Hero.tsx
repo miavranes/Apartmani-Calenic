@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useT } from "@/i18n";
 import { MapPin } from "lucide-react";
-import houseImg from "@/assets/kuca.png";
+import houseImg from "@/assets/kuca1.png";
 
 export function Hero() {
   const t = useT();
