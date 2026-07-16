@@ -293,7 +293,7 @@ export const emergencyContacts = [
   { key: "medical", number: "124", icon: "ambulance" },
   { key: "police", number: "122", icon: "shield" },
   { key: "fire", number: "123", icon: "flame" },
-  { key: "healthCenter", number: "+382 33 461 444", icon: "hospital" },
+  { key: "healthCenter", number: "+382 33 461 055", icon: "hospital" },
   { key: "general", number: "112", icon: "alert" },
 ] as const;
 
