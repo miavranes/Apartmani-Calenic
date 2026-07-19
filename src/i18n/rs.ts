@@ -118,6 +118,11 @@ export const ru: Dict = {
     siteUrl: "Ссылка на гид",
     wifiCode: "Wi-Fi код",
   },
+  review: {
+    title: "Hvala što ste bili naši gosti! ❤️",
+    description: "Nadamo se da ste uživali u boravku. Ako ste zadovoljni našom uslugom, izdvojite minut i podijelite svoje iskustvo na Google-u. Vaša recenzija nam mnogo znači i pomaže drugim gostima.",
+    buttonText: "Napišite recenziju na Google-u",
+  },
   common: {
     distance: "Расстояние",
     learnMore: "Подробнее",

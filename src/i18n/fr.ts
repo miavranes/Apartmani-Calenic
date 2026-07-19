@@ -132,6 +132,11 @@ export const fr: Dict = {
     siteUrl: "Lien du guide",
     wifiCode: "Code Wi-Fi",
   },
+  review: {
+    title: "Merci d'avoir été nos clients!",
+    description: "Nous espérons que vous avez apprécié votre séjour. Si vous êtes satisfait de notre service, veuillez prendre un moment pour partager votre expérience sur Google. Votre avis est très important pour nous et aide d'autres clients.",
+    buttonText: "Écrire un avis sur Google",
+  },
   common: {
     distance: "Distance",
     learnMore: "En savoir plus",
