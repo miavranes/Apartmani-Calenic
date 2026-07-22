@@ -7,39 +7,39 @@ export function Hero() {
   const t = useT();
 
   return (
-    <section className="relative overflow-hidden text-foreground h-screen w-screen">
-      <div className="relative h-screen w-screen">
+    <section className="relative overflow-hidden text-foreground h-screen w-full -mt-20 sm:-mt-24">
+      <div className="relative h-screen w-full">
         {/* Background image (absolute) */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <img
             src={houseImg}
             alt="Apartmani Čalenić"
-            className="h-screen w-screen object-cover hero-image opacity-100"
+            className="absolute inset-0 h-full w-full object-cover hero-image opacity-100"
+            style={{ minHeight: 'calc(100vh + 5rem)' }}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/25" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/50 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/35" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-60 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
 
         {/* Overlay content positioned left */}
         <div className="absolute inset-0 flex items-center">
           <div className="mx-8 max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-black/50 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
-              <MapPin className="h-3.5 w-3.5" />
-              <span className="uppercase tracking-wide">{t.heroLocation}</span>
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-white backdrop-blur-sm">
+              <MapPin className="h-3.5 w-3.5 text-[#C9A96A]" />
+              <span>{t.heroLocation}</span>
             </div>
 
-            <h1 className="font-serif text-white text-6xl leading-tight tracking-tight drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)] sm:text-7xl lg:text-8xl">
+            <h1 className="font-serif text-white text-6xl leading-tight tracking-tight drop-shadow-[0_10px_32px_rgba(0,0,0,0.65)] sm:text-7xl lg:text-8xl">
               Apartmani Čalenić
             </h1>
 
-            <div className="mt-8 flex gap-3">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 to="/info"
-                className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+                className="hero-cta inline-flex items-center justify-center rounded-full border border-white/20 bg-white/95 px-7 py-3 text-sm font-semibold text-[#2F5D50] transition duration-200 hover:bg-white"
               >
                 {t.nav.info}
               </Link>
-              
             </div>
           </div>
         </div>

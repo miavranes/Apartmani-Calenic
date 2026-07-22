@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Check, Copy, Wifi } from "lucide-react";
+import { QRCodeCanvas } from "qrcode.react";
 import { PageHeader, PageShell } from "@/components/PageShell";
 import { useT } from "@/i18n";
 import { WIFI } from "@/data/places";
@@ -26,6 +27,8 @@ function WifiCard({ floor, network, password }: { floor: string; network: string
     });
   };
 
+  const wifiQrValue = `WIFI:T:WPA;S:${network};P:${password};;`;
+
   return (
     <div className="rounded-3xl border border-border bg-card/80 p-6 shadow-soft backdrop-blur sm:p-8 animate-scale-in">
       <div className="flex items-center gap-3">
@@ -38,6 +41,12 @@ function WifiCard({ floor, network, password }: { floor: string; network: string
         <Row label={t.wifi.network} value={network} copied={copied === "net"} onCopy={() => copy(network, "net")} copyLabel={t.wifi.copy} copiedLabel={t.wifi.copied} />
         <Row label={t.wifi.password} value={password} copied={copied === "pwd"} onCopy={() => copy(password, "pwd")} copyLabel={t.wifi.copy} copiedLabel={t.wifi.copied} mono />
       </dl>
+      <div className="mt-8 rounded-3xl bg-background/70 p-4 text-center shadow-sm">
+        <div className="mb-4 font-serif text-2xl text-foreground">QR kod</div>
+        <div className="mx-auto inline-flex rounded-3xl bg-white p-3 shadow-soft">
+          <QRCodeCanvas value={wifiQrValue} size={156} level="M" includeMargin={false} />
+        </div>
+      </div>
     </div>
   );
 }

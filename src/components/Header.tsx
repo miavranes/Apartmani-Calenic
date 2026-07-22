@@ -21,11 +21,12 @@ export function Header() {
   ] as const;
 
   return (
-    <header className="site-header sticky top-0 z-50 w-full border-b border-border/60 font-sans">
-      <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+    <header className="site-header fixed top-0 left-0 right-0 z-50 w-full border-b border-border/50 font-sans backdrop-blur-lg h-20 sm:h-18 overflow-hidden">
+      <div className="flex h-full w-full items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <div className="min-w-0">
-          <Link to="/" className="flex items-center gap-2 font-serif text-lg tracking-tight sm:text-xl">
-            <span>Apartmani Čalenić</span>
+          <Link to="/" className="flex items-center gap-2 font-serif text-lg tracking-tight text-foreground sm:text-xl">
+            <span className="font-semibold">Apartmani Čalenić</span>
+            <span className="brand-detail block h-0.5 w-10 rounded-full bg-[#C9A96A]" />
           </Link>
         </div>
 
@@ -35,7 +36,7 @@ export function Header() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition hover:bg-accent hover:text-foreground"
+                className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition duration-200 hover:bg-accent/15 hover:text-foreground"
                 activeProps={{ className: "bg-accent text-foreground" }}
                 activeOptions={{ exact: l.to === "/" }}
               >
@@ -50,7 +51,7 @@ export function Header() {
             <button
               onClick={() => setOpen((o) => !o)}
               aria-label="Menu"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background shadow-sm lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background shadow-sm transition hover:border-accent hover:text-foreground lg:hidden"
             >
               {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
