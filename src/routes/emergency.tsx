@@ -41,7 +41,7 @@ function EmergencyPage() {
         {t.emergency.note}
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="stagger grid gap-4 sm:grid-cols-2">
         {emergencyContacts.map((c) => {
           const Icon = ICONS[c.icon];
           const tel = c.number.replace(/\s/g, "");
@@ -49,7 +49,7 @@ function EmergencyPage() {
             <a
               key={c.key}
               href={`tel:${tel}`}
-              className="group flex items-center gap-4 rounded-2xl border border-border bg-card/80 p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-primary/40 hover:bg-accent"
+              className="stagger-item hover-lift group flex items-center gap-4 rounded-2xl border border-border bg-card/80 p-5 shadow-soft transition-colors hover:border-primary/40 hover:bg-accent"
             >
               <span className="flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10 text-destructive">
                 <Icon className="h-6 w-6" />

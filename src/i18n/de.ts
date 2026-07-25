@@ -102,6 +102,7 @@ export const de: Dict = {
   beaches: {
     title: "Strände",
     subtitle: "Die schönsten Strände rund um Petrovac.",
+    clickToExpand: "Klicken für mehr Details",
   },
   restaurants: {
     title: "Empfohlene Restaurants",

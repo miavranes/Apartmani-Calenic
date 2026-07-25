@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Star } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { QuickActions } from "@/components/QuickActions";
 import { WeatherCard } from "@/components/WeatherCard";
@@ -50,18 +51,19 @@ function Index() {
         <div id="weather" className="mt-16 scroll-mt-24">
           <WeatherCard />
         </div>
-        <div className="mt-16 rounded-lg p-6 sm:p-8">
-          <h2 className="mb-4 text-2xl font-semibold">
-            {t.review.title}
-          </h2>
-          <p className="mb-6">
+        <div className="animate-fade-in mt-16 overflow-hidden rounded-3xl border border-border bg-card/80 p-8 text-center shadow-soft backdrop-blur sm:p-12">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent/15 text-accent">
+            <Star className="h-6 w-6 fill-current" />
+          </div>
+          <h2 className="font-serif text-2xl sm:text-3xl">{t.review.title}</h2>
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-7 text-muted-foreground">
             {t.review.description}
           </p>
           <a
             href="https://www.google.com/travel/search?q=apartmani%20calenic&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C73249150%2C121529350%2C121738283%2C121762713&hl=en-ME&gl=me&cs=1&ssta=1&ts=CAEaRwopEicyJTB4MTM0ZGQ3NzRlM2VlZDJkNzoweDFiY2RiZDdlMzc0Y2Y5ZjISGhIUCgcI6g8QCBgCEgcI6g8QCBgDGAEyAhAA&qs=CAEyE0Nnb0k4dk96dXVPdjctWWJFQUU4AkIJCfL5TDd-vc0bQgkJ8vlMN369zRs&ap=KigKEgm1HqTV9hlFQBBH6X-EPkvEyQBISCZ7BXiibGkVAEfpf4YOV8jJAugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiw8dqnyd6VAxUAAAAAHQAAAAAQAw"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:bg-primary/90"
+            className="hero-cta mt-7 inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition duration-200 hover:-translate-y-0.5 hover:bg-primary/90"
           >
             {t.review.buttonText}
           </a>

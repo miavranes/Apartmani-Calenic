@@ -33,10 +33,10 @@ function BeachesPage() {
           const isOpen = openBeach === b.id;
           const cardClasses = isOpen
             ? "w-full max-w-4xl flex-1 rounded-[2rem] border border-border bg-card/95 p-8 shadow-[0_40px_110px_-30px_rgba(0,0,0,0.45)] scale-[1.04] transition-all duration-500 ease-out"
-            : "w-full max-w-sm rounded-3xl border border-border bg-card/80 p-4 shadow-soft transition-all duration-300 ease-out lg:basis-[22%]";
+            : "w-full max-w-sm rounded-3xl border border-border bg-card/80 p-4 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-elevated lg:basis-[22%]";
 
           return (
-            <article key={b.id} className={cardClasses}>
+            <article key={b.id} className={`group ${cardClasses}`}>
               <div className="flex items-start justify-between gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary"><Waves className="h-5 w-5" /></span>
                 {b.distance && (
@@ -71,7 +71,9 @@ function BeachesPage() {
                   )}
                 </div>
               ) : (
-                <p className="mt-5 text-sm text-muted-foreground">Klikni i vidi više</p>
+                <p className="mt-5 text-sm text-muted-foreground underline-offset-4 group-hover:underline">
+                  {t.beaches.clickToExpand}
+                </p>
               )}
             </article>
           );

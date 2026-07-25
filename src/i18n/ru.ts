@@ -102,6 +102,7 @@ export const ru: Dict = {
   beaches: {
     title: "Пляжи",
     subtitle: "Самые красивые пляжи в окрестностях Петроваца.",
+    clickToExpand: "Нажмите, чтобы узнать больше",
   },
   restaurants: {
     title: "Рекомендуемые рестораны",

@@ -22,18 +22,18 @@ function ShoppingPage() {
     <PageShell>
       <PageHeader eyebrow={t.nav.shopping} title={t.shopping.title} subtitle={t.shopping.subtitle} />
 
-      <div className="rounded-3xl border border-red-200 bg-red-50/80 p-6 shadow-soft animate-fade-in sm:p-8 mb-8">
+      <div className="mb-8 rounded-3xl border border-destructive/25 bg-destructive/5 p-6 shadow-soft animate-fade-in sm:p-8">
         <div className="mb-4 flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-900">!</span>
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-destructive/10 text-destructive font-semibold">!</span>
           <h2 className="font-serif text-2xl">{t.shopping.supermarketsNoteTitle}</h2>
         </div>
-        <p className="text-[15px] text-red-900 whitespace-pre-line leading-6">{t.shopping.supermarketsNote}</p>
-        <p className="mt-3 text-sm font-medium text-red-900">
+        <p className="text-[15px] text-foreground/80 whitespace-pre-line leading-6">{t.shopping.supermarketsNote}</p>
+        <p className="mt-3 text-sm font-medium text-destructive">
           {t.shopping.holidayDatesLabel}: {t.shopping.holidayDates}
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="stagger grid gap-6 md:grid-cols-2">
         <Card icon={<ShoppingCart className="h-5 w-5" />} title={t.shopping.supermarkets}>
           <ul className="space-y-2 text-[15px] text-muted-foreground">
             {shopping.supermarkets.map((s, i) => (
@@ -64,7 +64,7 @@ function ShoppingPage() {
 
 function Card({ icon, title, children }: { icon: React.ReactNode; title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-3xl border border-border bg-card/80 p-6 shadow-soft animate-fade-in sm:p-8">
+    <div className="stagger-item hover-lift rounded-3xl border border-border bg-card/80 p-6 shadow-soft sm:p-8">
       <div className="mb-4 flex items-center gap-3">
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">{icon}</span>
         <h2 className="font-serif text-2xl">{title}</h2>

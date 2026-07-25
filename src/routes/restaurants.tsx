@@ -17,27 +17,36 @@ export const Route = createFileRoute("/restaurants")({
 function RestaurantsPage() {
   const t = useT();
   const { locale } = useI18n();
+  const tones = ["#E2915A", "#D1962F", "#5B8AA6"];
   return (
     <PageShell>
       <PageHeader eyebrow={t.nav.restaurants} title={t.restaurants.title} subtitle={t.restaurants.subtitle} />
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {restaurants.map((r) => (
-          <article key={r.id} className="group flex flex-col rounded-3xl border border-border bg-card/80 p-6 shadow-soft transition hover:-translate-y-0.5 animate-fade-in">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary"><UtensilsCrossed className="h-5 w-5" /></span>
-            <h2 className="mt-4 font-serif text-2xl">{getLocalizedValue(r.name, locale)}</h2>
-            <p className="mt-2 flex-1 text-sm text-muted-foreground">{r.desc[locale]}</p>
-            {r.mapsQuery && (
-              <a
-                href={`https://www.google.com/maps?q=${encodeURIComponent(r.mapsQuery)}`}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline"
+      <div className="stagger grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {restaurants.map((r, i) => {
+          const color = tones[i % tones.length];
+          return (
+            <article key={r.id} className="stagger-item hover-lift group flex flex-col rounded-3xl border border-border bg-card/80 p-6 shadow-soft">
+              <span
+                className="flex h-10 w-10 items-center justify-center rounded-full"
+                style={{ backgroundColor: `${color}22`, color }}
               >
-                <MapPin className="h-4 w-4" /> Google Maps <ExternalLink className="h-3 w-3" />
-              </a>
-            )}
-          </article>
-        ))}
+                <UtensilsCrossed className="h-5 w-5" />
+              </span>
+              <h2 className="mt-4 font-serif text-2xl">{getLocalizedValue(r.name, locale)}</h2>
+              <p className="mt-2 flex-1 text-sm text-muted-foreground">{r.desc[locale]}</p>
+              {r.mapsQuery && (
+                <a
+                  href={`https://www.google.com/maps?q=${encodeURIComponent(r.mapsQuery)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline"
+                >
+                  <MapPin className="h-4 w-4" /> Google Maps <ExternalLink className="h-3 w-3" />
+                </a>
+              )}
+            </article>
+          );
+        })}
       </div>
     </PageShell>
   );

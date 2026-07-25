@@ -91,7 +91,7 @@ export type Dict = {
     parking: string;
     parkingText: string;
   };
-  beaches: { title: string; subtitle: string };
+  beaches: { title: string; subtitle: string; clickToExpand: string };
   restaurants: { title: string; subtitle: string };
   shopping: {
     title: string;

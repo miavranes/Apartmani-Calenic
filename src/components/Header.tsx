@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { AlertTriangle, Menu, X } from "lucide-react";
 import { useT } from "@/i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
@@ -26,7 +26,6 @@ export function Header() {
         <div className="min-w-0">
           <Link to="/" className="flex items-center gap-2 font-serif text-lg tracking-tight text-foreground sm:text-xl">
             <span className="font-semibold">Apartmani Čalenić</span>
-            <span className="brand-detail block h-0.5 w-10 rounded-full bg-[#C9A96A]" />
           </Link>
         </div>
 
@@ -43,6 +42,13 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              to="/emergency"
+              className="ml-1 inline-flex items-center gap-1.5 rounded-full border border-destructive/30 bg-destructive/10 px-3 py-1.5 text-sm font-medium text-destructive transition duration-200 hover:bg-destructive/20"
+            >
+              <AlertTriangle className="h-3.5 w-3.5" />
+              {t.nav.emergency}
+            </Link>
           </nav>
 
           <div className="flex items-center gap-2">

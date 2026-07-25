@@ -102,6 +102,7 @@ export const en: Dict = {
   beaches: {
     title: "Beaches",
     subtitle: "The most beautiful beaches around Petrovac.",
+    clickToExpand: "Click to see more",
   },
   restaurants: {
     title: "Recommended restaurants",

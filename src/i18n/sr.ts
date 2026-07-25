@@ -98,6 +98,7 @@ export const sr: Dict = {
   beaches: {
     title: "Plaže",
     subtitle: "Najljepše plaže u okolini Petrovca.",
+    clickToExpand: "Kliknite da vidite više",
   },
   restaurants: {
     title: "Preporučeni restorani",
