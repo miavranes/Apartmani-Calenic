@@ -76,14 +76,7 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-            <a
-              href={CONTACT.airbnb}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-white/80 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
-            >
-              Airbnb <ExternalLink className="h-3 w-3" />
-            </a>
+          
           </div>
         </div>
       </div>

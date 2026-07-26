@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#241a15"/>
+      <stop offset="48%" stop-color="#3a2416"/>
+      <stop offset="100%" stop-color="#4a2c18"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0C77E"/>
+      <stop offset="100%" stop-color="#D1962F"/>
+    </linearGradient>
+    <linearGradient id="terracotta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0A96A"/>
+      <stop offset="100%" stop-color="#E2915A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <!-- monogram A C -->
+  <g transform="translate(256 226)" font-family="'Playfair Display', Georgia, serif" font-weight="600">
+    <text x="-108" y="46" font-size="196" fill="url(#gold)" text-anchor="middle">A</text>
+    <text x="100" y="46" font-size="196" fill="url(#terracotta)" text-anchor="middle">Č</text>
+  </g>
+
+  <!-- wave accent -->
+  <path d="M96 366 Q 166 336 236 366 T 376 366 T 416 356"
+        fill="none" stroke="url(#gold)" stroke-width="14" stroke-linecap="round" opacity="0.9"/>
+
+</svg>
