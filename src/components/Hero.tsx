@@ -23,33 +23,33 @@ export function Hero() {
 
         {/* Overlay content positioned left */}
         <div className="absolute inset-0 flex items-center">
-          <div className="mx-8 max-w-3xl">
-            <div className="animate-fade-in-left mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-white backdrop-blur-sm">
-              <MapPin className="h-3.5 w-3.5 text-[#C9A96A]" />
+          <div className="mx-5 max-w-3xl sm:mx-8">
+            <div className="animate-fade-in-left mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm sm:px-4 sm:text-xs sm:tracking-[0.3em]">
+              <MapPin className="h-3.5 w-3.5 shrink-0 text-[#C9A96A]" />
               <span>{t.heroLocation}</span>
             </div>
 
             <h1
-              className="font-serif text-white text-6xl leading-tight tracking-tight drop-shadow-[0_10px_32px_rgba(0,0,0,0.65)] sm:text-7xl lg:text-8xl"
+              className="font-serif text-white text-[2.75rem] leading-[1.05] tracking-tight drop-shadow-[0_10px_32px_rgba(0,0,0,0.65)] sm:text-6xl lg:text-7xl xl:text-8xl"
               style={{ animation: "slide-up 0.8s cubic-bezier(.22,1,.36,1) 0.1s both" }}
             >
               Apartmani Čalenić
             </h1>
 
             <p
-              className="mt-5 max-w-xl text-lg leading-relaxed text-white/90 drop-shadow-[0_6px_20px_rgba(0,0,0,0.5)] sm:text-xl"
+              className="mt-4 max-w-xl text-base leading-relaxed text-white/90 drop-shadow-[0_6px_20px_rgba(0,0,0,0.5)] sm:mt-5 sm:text-lg lg:text-xl"
               style={{ animation: "slide-up 0.8s cubic-bezier(.22,1,.36,1) 0.25s both" }}
             >
               {t.heroSubtitle}
             </p>
 
             <div
-              className="mt-10 flex flex-wrap gap-4"
+              className="mt-8 flex flex-wrap gap-4 sm:mt-10"
               style={{ animation: "slide-up 0.8s cubic-bezier(.22,1,.36,1) 0.4s both" }}
             >
               <Link
                 to="/info"
-                className="hero-cta inline-flex items-center justify-center rounded-full border border-white/20 bg-white/95 px-7 py-3 text-sm font-semibold text-[#2F5D50] transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-xl"
+                className="hero-cta inline-flex items-center justify-center rounded-full border border-white/20 bg-white/95 px-6 py-2.5 text-sm font-semibold text-[#2F5D50] transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-xl sm:px-7 sm:py-3"
               >
                 {t.nav.info}
               </Link>

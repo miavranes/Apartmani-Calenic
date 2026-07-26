@@ -32,7 +32,7 @@ function BeachesPage() {
         {orderedBeaches.map((b) => {
           const isOpen = openBeach === b.id;
           const cardClasses = isOpen
-            ? "w-full max-w-4xl flex-1 rounded-[2rem] border border-border bg-card/95 p-8 shadow-[0_40px_110px_-30px_rgba(0,0,0,0.45)] scale-[1.04] transition-all duration-500 ease-out"
+            ? "w-full max-w-4xl flex-1 rounded-[2rem] border border-border bg-card/95 p-6 shadow-[0_40px_110px_-30px_rgba(0,0,0,0.45)] transition-all duration-500 ease-out sm:p-8 lg:scale-[1.04]"
             : "w-full max-w-sm rounded-3xl border border-border bg-card/80 p-4 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-elevated lg:basis-[22%]";
 
           return (
@@ -61,7 +61,7 @@ function BeachesPage() {
                   <p>{b.desc[locale]}</p>
                   {(b.mapsUrl || b.mapsQuery) && (
                     <a
-                      href={b.mapsUrl ? b.mapsUrl : `https://www.google.com/maps?q=${encodeURIComponent(b.mapsQuery)}`}
+                      href={b.mapsUrl ? b.mapsUrl : `https://www.google.com/maps?q=${encodeURIComponent(b.mapsQuery ?? "")}`}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline"

@@ -49,15 +49,15 @@ function ContactPage() {
       </div>
 
       <div id="map" className="mt-10 scroll-mt-24">
-        <div className="mb-4 flex items-end justify-between">
-          <div>
+        <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div className="min-w-0">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4" />
+              <MapPin className="h-4 w-4 shrink-0" />
               <span>{t.contact.address}</span>
             </div>
-            <div className="mt-1 font-serif text-2xl">{CONTACT.address}</div>
+            <div className="mt-1 break-words font-serif text-xl sm:text-2xl">{CONTACT.address}</div>
           </div>
-          <a href={mapsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm text-primary-foreground transition hover:opacity-90">
+          <a href={mapsUrl} target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm text-primary-foreground transition hover:opacity-90">
             <MapPin className="h-4 w-4" /> {t.contact.openMaps}
           </a>
         </div>

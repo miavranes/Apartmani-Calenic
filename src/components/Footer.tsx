@@ -35,9 +35,9 @@ export function Footer() {
             <div className="font-serif text-3xl">Apartmani Čalenić</div>
             <p className="mt-2 max-w-xs text-sm text-white/65">{t.heroLocation}</p>
             <div className="mt-5 h-[3px] w-14 rounded-full bg-gradient-to-r from-[#D1962F] to-[#E2915A]" />
-            <div className="mt-5 flex items-start gap-2 text-sm text-white/60">
+            <div className="mt-5 flex min-w-0 items-start gap-2 text-sm text-white/60">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#D1962F]" />
-              <span>{CONTACT.address}</span>
+              <span className="min-w-0 break-words">{CONTACT.address}</span>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export function Footer() {
                 href={c.href}
                 target={c.external ? "_blank" : undefined}
                 rel={c.external ? "noreferrer" : undefined}
-                className="group flex items-center gap-3 text-sm"
+                className="group flex min-w-0 items-center gap-3 text-sm"
               >
                 <span
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition duration-300 group-hover:scale-110"
@@ -56,7 +56,7 @@ export function Footer() {
                 >
                   <c.icon className="h-4 w-4" />
                 </span>
-                <span className="text-white/80 transition group-hover:text-white">{c.label}</span>
+                <span className="min-w-0 break-words text-white/80 transition group-hover:text-white">{c.label}</span>
               </a>
             ))}
           </div>
@@ -76,7 +76,14 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-          
+            <a
+              href={CONTACT.airbnb}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-white/80 transition hover:border-white/30 hover:bg-white/10 hover:text-white"
+            >
+              Airbnb <ExternalLink className="h-3 w-3" />
+            </a>
           </div>
         </div>
       </div>

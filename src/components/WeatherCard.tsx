@@ -61,7 +61,7 @@ export function WeatherCard() {
       {data && (
         <>
           <div className="mt-6 flex items-end gap-3">
-            <div className="font-serif text-6xl leading-none">
+            <div className="font-serif text-5xl leading-none sm:text-6xl">
               {Math.round(data.current.temperature_2m)}°
             </div>
             <div className="mb-2 text-sm text-muted-foreground">
@@ -83,14 +83,14 @@ export function WeatherCard() {
 
           <div className="mt-6">
             <div className="mb-3 text-sm font-medium">{t.weather.forecast}</div>
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
               {data.daily.time.map((d, i) => (
-                <div key={d} className="flex flex-col items-center gap-1 rounded-xl border border-border/60 bg-background/40 px-2 py-3">
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                <div key={d} className="flex flex-col items-center gap-1 rounded-xl border border-border/60 bg-background/40 px-1 py-2 sm:px-2 sm:py-3">
+                  <div className="text-[10px] uppercase tracking-wide text-muted-foreground sm:text-xs">
                     {i === 0 ? "·" : dayFmt(d, navigator.language)}
                   </div>
-                  <Icon code={data.daily.weather_code[i]} className="h-6 w-6" />
-                  <div className="text-xs">
+                  <Icon code={data.daily.weather_code[i]} className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <div className="text-[11px] sm:text-xs">
                     <span className="font-medium">{Math.round(data.daily.temperature_2m_max[i])}°</span>
                     <span className="ml-1 text-muted-foreground">{Math.round(data.daily.temperature_2m_min[i])}°</span>
                   </div>

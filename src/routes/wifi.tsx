@@ -53,14 +53,14 @@ function WifiCard({ floor, network, password }: { floor: string; network: string
 
 function Row({ label, value, copied, onCopy, copyLabel, copiedLabel, mono }: { label: string; value: string; copied: boolean; onCopy: () => void; copyLabel: string; copiedLabel: string; mono?: boolean }) {
   return (
-    <div className="flex items-center justify-between gap-4 rounded-2xl border border-border/60 bg-background/40 px-4 py-3">
-      <div>
+    <div className="flex items-center justify-between gap-3 rounded-2xl border border-border/60 bg-background/40 px-4 py-3">
+      <div className="min-w-0 flex-1">
         <div className="text-[10px] uppercase tracking-wide text-muted-foreground">{label}</div>
-        <div className={`text-lg ${mono ? "font-mono" : "font-medium"}`}>{value}</div>
+        <div className={`break-words text-lg ${mono ? "font-mono" : "font-medium"}`}>{value}</div>
       </div>
       <button
         onClick={onCopy}
-        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs transition hover:bg-accent"
+        className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs transition hover:bg-accent"
       >
         {copied ? <Check className="h-3.5 w-3.5 text-primary" /> : <Copy className="h-3.5 w-3.5" />}
         {copied ? copiedLabel : copyLabel}

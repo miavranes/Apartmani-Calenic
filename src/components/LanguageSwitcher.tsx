@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger
         aria-label="Select language"
-        className="lang-trigger inline-flex h-10 items-center gap-2 rounded-full border border-border px-3 text-sm shadow-sm transition hover:bg-accent"
+        className="lang-trigger inline-flex h-9 items-center gap-1.5 rounded-full border border-white/15 px-2.5 text-sm text-white shadow-sm transition hover:bg-white/20 sm:h-10 sm:gap-2 sm:px-3"
       >
         <Globe className="h-4 w-4" />
         <span className="hidden sm:inline">{current?.code.toUpperCase()}</span>
