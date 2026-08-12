@@ -133,6 +133,10 @@ export const de: Dict = {
     siteUrl: "Guide-Link",
     wifiCode: "Wi-Fi-Code",
   },
+  welcome: {
+    greeting: "Willkommen in den Apartments Čalenić!",
+    message: "Liebe Gäste, wir freuen uns, Sie in Petrovac na Moru begrüßen zu dürfen. Wir hoffen, dass Sie sich wie zu Hause fühlen und die Schönheit unserer Küste genießen. Dieser Leitfaden soll Ihnen helfen, das Beste aus Ihrem Aufenthalt herauszuholen.",
+  },
   review: {
     title: "Danke, dass Sie unsere Gäste waren!",
     description: "Wir hoffen, Ihnen hat Ihr Aufenthalt gefallen. Wenn Sie mit unserem Service zufrieden sind, nehmen Sie sich einen Moment Zeit und teilen Sie Ihre Erfahrung auf Google mit. Ihre Bewertung bedeutet uns viel und hilft anderen Gästen.",

@@ -47,6 +47,27 @@ function Index() {
     <>
       <Hero />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20">
+        {/* Welcome section */}
+        <div
+          className="mx-auto mb-12 overflow-hidden rounded-3xl p-8 text-center sm:p-12 border-0"
+          style={{
+            maxWidth: "42rem",
+            background: "linear-gradient(135deg, color-mix(in oklab, var(--primary) 14%, var(--background)), color-mix(in oklab, var(--accent) 10%, var(--background)))",
+            boxShadow: "0 20px 60px -16px color-mix(in oklab, var(--primary) 22%, transparent), 0 4px 16px -4px color-mix(in oklab, var(--primary) 10%, transparent)",
+            animation: "slide-up 0.8s cubic-bezier(.22,1,.36,1) 0.15s both",
+          }}
+        >
+          
+          <h2
+            className="font-serif text-2xl font-bold sm:text-3xl"
+            style={{ color: "var(--primary)" }}
+          >
+            {t.welcome.greeting}
+          </h2>
+          <p className="mt-4 text-[15px] leading-7 text-muted-foreground">
+            {t.welcome.message}
+          </p>
+        </div>
         <QuickActions />
         <div id="weather" className="mt-16 scroll-mt-24">
           <WeatherCard />

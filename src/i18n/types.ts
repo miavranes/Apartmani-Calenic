@@ -115,6 +115,15 @@ export type Dict = {
     siteUrl: string;
     wifiCode: string;
   };
+  welcome: {
+    greeting: string;
+    message: string;
+  };
+  review: {
+    title: string;
+    description: string;
+    buttonText: string;
+  };
   common: {
     distance: string;
     learnMore: string;

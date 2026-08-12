@@ -129,6 +129,10 @@ export const sr: Dict = {
     siteUrl: "Link vodiča",
     wifiCode: "Wi-Fi kod",
   },
+  welcome: {
+    greeting: "Dobro došli u Apartmane Čalenić!",
+    message: "Dragi gosti, čast nam je da vas ugostimo u Petrovcu na Moru. Nadamo se da ćete se osjećati kao kod kuće i da ćete uživati u ljepotama naše obale. Ovaj vodič je tu da vam pomogne da izvučete maksimum iz svog boravka.",
+  },
   review: {
     title: "Hvala što ste bili naši gosti!",
     description: "Nadamo se da ste uživali u boravku. Ako ste zadovoljni našom uslugom, izdvojite minut i podijelite svoje iskustvo na Google-u. Vaša recenzija nam mnogo znači i pomaže drugim gostima.",

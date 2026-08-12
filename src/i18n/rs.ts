@@ -118,6 +118,10 @@ export const ru: Dict = {
     siteUrl: "Ссылка на гид",
     wifiCode: "Wi-Fi код",
   },
+  welcome: {
+    greeting: "Добро пожаловать в апартаменты Чаленич!",
+    message: "Дорогие гости, нам очень приятно принимать вас в Петроваце-на-Мору. Мы надеемся, что вы почувствуете себя как дома и насладитесь красотой нашего побережья. Этот гид поможет вам получить максимум удовольствия от вашего отдыха.",
+  },
   review: {
     title: "Hvala što ste bili naši gosti! ❤️",
     description: "Nadamo se da ste uživali u boravku. Ako ste zadovoljni našom uslugom, izdvojite minut i podijelite svoje iskustvo na Google-u. Vaša recenzija nam mnogo znači i pomaže drugim gostima.",
